@@ -17,6 +17,11 @@ class MyCustomPlugin extends ConduitPlugin {
 		console.log('This message is from a plugin. I have hooked the `initialized` event handle! I run BEFORE the base plugin');
 	}
 
+	onEnabled() {
+		// Open a chest GUI with `/chest`
+		this.registerCommand('chest', chestCommandHandler);
+	}
+
 	onBeforeChat(event) {
 		event.getSender()
 			.sendMessage('This message is sent via a plugin using `onBeforeChat`. This event runs before the chat packet is handled internally or by other plugins');
@@ -24,6 +29,14 @@ class MyCustomPlugin extends ConduitPlugin {
 }
 
 module.exports = MyCustomPlugin;
+
+function chestCommandHandler(event) {
+	event.getSender().openWindow({
+		type: 'chest',
+		slots: 9,
+		title: '§bChest'
+	});
+}
 ```
 
 ## Plugin API
