@@ -1,12 +1,20 @@
 {
   "name": "conduit-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Base plugin for Conduit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "redducks",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conduit-MC/conduit-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Conduit-MC/conduit-plugin/issues"
+  },
+  "homepage": "https://github.com/Conduit-MC/conduit-plugin#readme"
 }
