@@ -24,6 +24,10 @@ class ConduitPlugin {
 			}
 		});
 	}
+
+	registerCommand(name, handler) {
+		this.server.commands[name] = handler;
+	}
 }
 
 /*
